@@ -22,7 +22,7 @@ public class Book {
         return author;
     }
 
-    public void setAuthor(String author) {
-        this.author.setNameAuthor(author);
-    }
+    //public void setAuthor(String author) {
+    //    this.author.setNameAuthor(author);
+   // }
 }

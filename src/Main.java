@@ -3,20 +3,20 @@ import java.lang.reflect.Array;
 public class Main {
 
     public static void main(String[] args)throws NullPointerException {
-        Book bookOne = new Book("book1", new Author("Ura zdarova"), 1862);
-        Book bookTwo = new Book("book2", new Author("Fedor Tytkin"), 1501);
-        System.out.println(bookOne.getName()+ " " + bookOne.getAuthor().getNameAuthor() + " " + bookOne.getYearPublish());
+        Book bookOne = new Book("book1", new Author("Ura zdarova", "zdaroba"), 1862);
+        Book bookTwo = new Book("book2", new Author("Fedor Tytkin", "alesha"), 1501);
+        System.out.println(bookOne.getName()+ " " + bookOne.getAuthor().getNameAuthor() + " " +bookOne.getAuthor().getSurName()+ " " + bookOne.getYearPublish());
         //System.out.println(bookTwo.getName()+ " " + authorBookTwo.getNameAuthor()+ " "+ bookTwo.getYearPublish());
         bookOne.setYearPublish(1897);
-        System.out.println(bookOne.getName()+ " " + bookOne.getAuthor().getNameAuthor() + " "+ bookOne.getYearPublish());
-        System.out.println(bookTwo.getName()+ " " + bookTwo.getAuthor().getNameAuthor() + " "+ bookTwo.getYearPublish());
-        bookTwo.setAuthor("1231234asdf2342");
+        System.out.println(bookOne.getName()+ " " + bookOne.getAuthor().getNameAuthor() + " " + bookOne.getAuthor().getSurName()+ " "+ bookOne.getYearPublish());
+        System.out.println(bookTwo.getName()+ " " + bookTwo.getAuthor().getNameAuthor() + " " + bookTwo.getAuthor().getSurName()+ " "+ bookTwo.getYearPublish());
+        //bookTwo.setAuthor("1231234asdf2342");
         System.out.println(bookTwo.getName()+ " " + bookTwo.getAuthor().getNameAuthor() + " "+ bookTwo.getYearPublish());
         System.out.println("=========================");
         Book[] books = new Book[5];
         books[0] = bookOne;
         books[1] = bookTwo;
-        Book bookTree = new Book("book3", new Author("123 321"), 1888);
+        Book bookTree = new Book("book3", new Author("123 321", "vasyaaa"), 1888);
         massiv(books,bookTree);
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
